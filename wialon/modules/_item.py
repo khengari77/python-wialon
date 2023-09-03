@@ -1,7 +1,7 @@
 
 class Item:
     def __init__(self, session):
-        self.session session
+        self.session = session
 
     def update_custom_property(self, itemId, name, value):
         """
@@ -10,10 +10,10 @@ class Item:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("item/update_custom_property", **params)
+        return self.session.call("item_update_custom_property", **params)
 
 
-    def update_ftp_property(self, itemId, host, login, pass, path, check, hostingFtp):
+    def update_ftp_property(self, itemId, host, login, pass_, path, check, hostingFtp):
         """
                 Parameters
          Name  Description  itemId  resource ID 
@@ -34,7 +34,7 @@ class Item:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("item/update_ftp_property", **params)
+        return self.session.call("item_update_ftp_property", **params)
 
 
     def update_admin_field(self, itemId, id, callMode, n, v):
@@ -61,7 +61,7 @@ class Item:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("item/update_admin_field", **params)
+        return self.session.call("item_update_admin_field", **params)
 
 
     def update_name(self, itemId, name):
@@ -75,7 +75,7 @@ class Item:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("item/update_name", **params)
+        return self.session.call("item_update_name", **params)
 
 
     def update_profile_field(self, itemId, n, v):
@@ -115,7 +115,7 @@ class Item:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("item/update_profile_field", **params)
+        return self.session.call("item_update_profile_field", **params)
 
 
     def add_log_record(self, itemId, action, newValue, oldValue):
@@ -130,7 +130,7 @@ class Item:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("item/add_log_record", **params)
+        return self.session.call("item_add_log_record", **params)
 
 
     def delete_item(self, itemId):
@@ -142,7 +142,7 @@ class Item:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("item/delete_item", **params)
+        return self.session.call("item_delete_item", **params)
 
 
     def update_custom_field(self, itemId, id, callMode, n, v):
@@ -169,7 +169,7 @@ class Item:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("item/update_custom_field", **params)
+        return self.session.call("item_update_custom_field", **params)
 
 
     def update_measure_units(self, itemId, type, flags):
@@ -182,7 +182,7 @@ class Item:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("item/update_measure_units", **params)
+        return self.session.call("item_update_measure_units", **params)
 
 
     def list_backups(self, itemId):
@@ -204,4 +204,4 @@ class Item:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("item/list_backups", **params)
+        return self.session.call("item_list_backups", **params)

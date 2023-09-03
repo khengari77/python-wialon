@@ -1,7 +1,7 @@
 
 class Token:
     def __init__(self, session):
-        self.session session
+        self.session = session
 
     def update(self, callMode, userId, h, app, at, dur, fl, p, items, deleteAll):
         """
@@ -42,7 +42,7 @@ class Token:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("token/update", **params)
+        return self.session.call("token_update", **params)
 
 
     def list(self, userId):
@@ -67,7 +67,7 @@ class Token:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("token/list", **params)
+        return self.session.call("token_list", **params)
 
 
     def login(self, token, operateAs, fl):
@@ -150,4 +150,4 @@ class Token:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("token/login", **params)
+        return self.session.call("token_login", **params)

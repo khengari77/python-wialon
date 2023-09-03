@@ -1,7 +1,7 @@
 
 class User:
     def __init__(self, session):
-        self.session session
+        self.session = session
 
     def update_auth_params(self, userId, type, phone):
         """
@@ -16,7 +16,7 @@ class User:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("user/update_auth_params", **params)
+        return self.session.call("user_update_auth_params", **params)
 
 
     def verify_auth(self, userId, type, destination):
@@ -31,7 +31,7 @@ class User:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("user/verify_auth", **params)
+        return self.session.call("user_verify_auth", **params)
 
 
     def send_sms(self, phoneNumber, smsText):
@@ -44,7 +44,7 @@ class User:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("user/send_sms", **params)
+        return self.session.call("user_send_sms", **params)
 
 
     def update_item_access(self, userId, itemId, accessMask):
@@ -57,7 +57,7 @@ class User:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("user/update_item_access", **params)
+        return self.session.call("user_update_item_access", **params)
 
 
     def get_items_access(self, userId, directAccess, itemSuperclass, flags):
@@ -83,7 +83,7 @@ class User:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("user/get_items_access", **params)
+        return self.session.call("user_get_items_access", **params)
 
 
     def get_locale(self, userId):
@@ -97,7 +97,7 @@ class User:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("user/get_locale", **params)
+        return self.session.call("user_get_locale", **params)
 
 
     def update_user_flags(self, userId, flags, flagsMask):
@@ -120,7 +120,7 @@ class User:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("user/update_user_flags", **params)
+        return self.session.call("user_update_user_flags", **params)
 
 
     def update_password(self, userId, oldPassword, newPassword):
@@ -133,7 +133,7 @@ class User:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("user/update_password", **params)
+        return self.session.call("user_update_password", **params)
 
 
     def get_dst_time(self, timeFrom, timeTo, tz):
@@ -149,7 +149,7 @@ class User:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("user/get_dst_time", **params)
+        return self.session.call("user_get_dst_time", **params)
 
 
     def update_hosts_mask(self, userId, hostsMask):
@@ -163,4 +163,4 @@ class User:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("user/update_hosts_mask", **params)
+        return self.session.call("user_update_hosts_mask", **params)

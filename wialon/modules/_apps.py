@@ -1,7 +1,7 @@
 
 class Apps:
     def __init__(self, session):
-        self.session session
+        self.session = session
 
     def list(self, ):
         """
@@ -21,4 +21,4 @@ class Apps:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("apps/list", **params)
+        return self.session.call("apps_list", **params)

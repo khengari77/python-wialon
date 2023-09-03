@@ -1,7 +1,7 @@
 
 class Report:
     def __init__(self, session):
-        self.session session
+        self.session = session
 
     def get_report_status(self, ):
         """
@@ -13,7 +13,7 @@ class Report:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("report/get_report_status", **params)
+        return self.session.call("report_get_report_status", **params)
 
 
     def get_result_subrows(self, tableIndex, rowIndex):
@@ -46,7 +46,7 @@ class Report:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("report/get_result_subrows", **params)
+        return self.session.call("report_get_result_subrows", **params)
 
 
     def get_result_rows(self, tableIndex, indexFrom, indexTo):
@@ -79,7 +79,7 @@ class Report:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("report/get_result_rows", **params)
+        return self.session.call("report_get_result_rows", **params)
 
 
     def cleanup_result(self, ):
@@ -91,7 +91,7 @@ class Report:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("report/cleanup_result", **params)
+        return self.session.call("report_cleanup_result", **params)
 
 
     def get_report_tables(self, ):
@@ -158,7 +158,7 @@ class Report:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("report/get_report_tables", **params)
+        return self.session.call("report_get_report_tables", **params)
 
 
     def get_result_chart(self, attachmentIndex, action, width, height, autoScaleY, pixelFrom, pixelTo, flags):
@@ -188,7 +188,7 @@ class Report:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("report/get_result_chart", **params)
+        return self.session.call("report_get_result_chart", **params)
 
 
     def get_result_map(self, width, height):
@@ -202,7 +202,7 @@ class Report:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("report/get_result_map", **params)
+        return self.session.call("report_get_result_map", **params)
 
 
     def export_result(self, format, pageOrientation, pageSize, pageWidth, coding, delimiter, headings, compress, attachMap, extendBounds, hideMapBasis, outputFileName):
@@ -229,7 +229,7 @@ class Report:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("report/export_result", **params)
+        return self.session.call("report_export_result", **params)
 
 
     def get_report_data(self, itemId, col):
@@ -276,7 +276,7 @@ class Report:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("report/get_report_data", **params)
+        return self.session.call("report_get_report_data", **params)
 
 
     def get_result_photo(self, attachmentIndex, border):
@@ -288,7 +288,7 @@ class Report:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("report/get_result_photo", **params)
+        return self.session.call("report_get_result_photo", **params)
 
 
     def hittest_chart(self, attachmentIndex, datasetIndex, valueX, valueY, flags):
@@ -322,7 +322,7 @@ class Report:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("report/hittest_chart", **params)
+        return self.session.call("report_hittest_chart", **params)
 
 
     def get_result_video(self, attachmentIndex):
@@ -336,7 +336,7 @@ class Report:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("report/get_result_video", **params)
+        return self.session.call("report_get_result_video", **params)
 
 
     def render_json(self, attachmentIndex, width, useCrop, cropBegin, cropEnd):
@@ -408,4 +408,4 @@ class Report:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("report/render_json", **params)
+        return self.session.call("report_render_json", **params)

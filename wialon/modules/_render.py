@@ -1,7 +1,7 @@
 
 class Render:
     def __init__(self, session):
-        self.session session
+        self.session = session
 
     def remove_all_layers(self, ):
         """
@@ -10,7 +10,7 @@ class Render:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("render/remove_all_layers", **params)
+        return self.session.call("render_remove_all_layers", **params)
 
 
     def create_messages_layer(self, layerName, itemId, timeFrom, timeTo, tripDetector, trackColor, trackWidth, arrows, points, pointColor, annotations, flags):
@@ -71,7 +71,7 @@ class Render:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("render/create_messages_layer", **params)
+        return self.session.call("render_create_messages_layer", **params)
 
 
     def get_messages(self, layerName, indexFrom, indexTo, unitId):
@@ -88,7 +88,7 @@ class Render:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("render/get_messages", **params)
+        return self.session.call("render_get_messages", **params)
 
 
     def delete_message(self, layerName, msgIndex, unitId):
@@ -101,7 +101,7 @@ class Render:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("render/delete_message", **params)
+        return self.session.call("render_delete_message", **params)
 
 
     def enable_layer(self, layerName, enable):
@@ -114,7 +114,7 @@ class Render:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("render/enable_layer", **params)
+        return self.session.call("render_enable_layer", **params)
 
 
     def remove_layer(self, layerName):
@@ -125,7 +125,7 @@ class Render:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("render/remove_layer", **params)
+        return self.session.call("render_remove_layer", **params)
 
 
     def set_locale(self, tzOffset, language, flags, formatDate, density):
@@ -166,4 +166,4 @@ class Render:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("render/set_locale", **params)
+        return self.session.call("render_set_locale", **params)

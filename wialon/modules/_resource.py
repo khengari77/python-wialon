@@ -1,7 +1,7 @@
 
 class Resource:
     def __init__(self, session):
-        self.session session
+        self.session = session
 
     def update_orders_notification(self, resourceId, ordersNotification):
         """
@@ -59,7 +59,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/update_orders_notification", **params)
+        return self.session.call("resource_update_orders_notification", **params)
 
 
     def upload_tag_image(self, itemId, tagId, eventHash):
@@ -73,7 +73,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/upload_tag_image", **params)
+        return self.session.call("resource_upload_tag_image", **params)
 
 
     def cleanup_trailer_interval(self, resourceId, trailerId, timeFrom, timeTo):
@@ -87,7 +87,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/cleanup_trailer_interval", **params)
+        return self.session.call("resource_cleanup_trailer_interval", **params)
 
 
     def cleanup_driver_interval(self, resourceId, driverId, timeFrom, timeTo):
@@ -101,7 +101,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/cleanup_driver_interval", **params)
+        return self.session.call("resource_cleanup_driver_interval", **params)
 
 
     def upload_driver_image(self, itemId, driverId, eventHash):
@@ -115,7 +115,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/upload_driver_image", **params)
+        return self.session.call("resource_upload_driver_image", **params)
 
 
     def driver_operate(self, phoneNumber, password, say, message, timeSend, ej, appId, appType):
@@ -124,7 +124,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/driver_operate", **params)
+        return self.session.call("resource_driver_operate", **params)
 
 
     def get_unit_trailers(self, unitId):
@@ -142,7 +142,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/get_unit_trailers", **params)
+        return self.session.call("resource_get_unit_trailers", **params)
 
 
     def upload_tacho_file(self, outputFlag, eventHash):
@@ -151,7 +151,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/upload_tacho_file", **params)
+        return self.session.call("resource_upload_tacho_file", **params)
 
 
     def update_tag_units(self, itemId, units):
@@ -165,7 +165,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/update_tag_units", **params)
+        return self.session.call("resource_update_tag_units", **params)
 
 
     def update_trailer_units(self, itemId, units):
@@ -179,7 +179,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/update_trailer_units", **params)
+        return self.session.call("resource_update_trailer_units", **params)
 
 
     def get_orders_notification(self, resourceId):
@@ -189,7 +189,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/get_orders_notification", **params)
+        return self.session.call("resource_get_orders_notification", **params)
 
 
     def upload_zone_image(self, itemId, id, eventHash, oldItemId, oldZoneId):
@@ -206,7 +206,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/upload_zone_image", **params)
+        return self.session.call("resource_upload_zone_image", **params)
 
 
     def get_unit_drivers(self, unitId):
@@ -225,7 +225,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/get_unit_drivers", **params)
+        return self.session.call("resource_get_unit_drivers", **params)
 
 
     def get_job_data(self, itemId, col):
@@ -302,7 +302,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/get_job_data", **params)
+        return self.session.call("resource_get_job_data", **params)
 
 
     def get_trailer_bindings(self, resourceId, unitId, trailerId, timeFrom, timeTo):
@@ -324,7 +324,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/get_trailer_bindings", **params)
+        return self.session.call("resource_get_trailer_bindings", **params)
 
 
     def driver_status(self, phoneNumber, password, app, fl):
@@ -359,7 +359,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/driver_status", **params)
+        return self.session.call("resource_driver_status", **params)
 
 
     def update_trailers_group(self, itemId, id, callMode, n, d, drs, f):
@@ -389,7 +389,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/update_trailers_group", **params)
+        return self.session.call("resource_update_trailers_group", **params)
 
 
     def upload_trailer_image(self, itemId, trailerId, eventHash):
@@ -403,7 +403,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/upload_trailer_image", **params)
+        return self.session.call("resource_upload_trailer_image", **params)
 
 
     def update_email_template(self, resourceId, subject, body, flags):
@@ -417,7 +417,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/update_email_template", **params)
+        return self.session.call("resource_update_email_template", **params)
 
 
     def create_zone_by_track(self, layerName, itemId, unitId, n, c, w):
@@ -436,7 +436,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/create_zone_by_track", **params)
+        return self.session.call("resource_create_zone_by_track", **params)
 
 
     def get_tag_bindings(self, resourceId, unitId, tagId, timeFrom, timeTo):
@@ -460,7 +460,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/get_tag_bindings", **params)
+        return self.session.call("resource_get_tag_bindings", **params)
 
 
     def update_zones_group(self, itemId, id, callMode, n, d, zns, f):
@@ -490,7 +490,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/update_zones_group", **params)
+        return self.session.call("resource_update_zones_group", **params)
 
 
     def update_driver_units(self, itemId, units):
@@ -504,7 +504,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/update_driver_units", **params)
+        return self.session.call("resource_update_driver_units", **params)
 
 
     def get_driver_bindings(self, resourceId, unitId, driverId, timeFrom, timeTo):
@@ -526,7 +526,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/get_driver_bindings", **params)
+        return self.session.call("resource_get_driver_bindings", **params)
 
 
     def update_tag_message(self, resourceId, unitId, tagId, time, callMode):
@@ -541,7 +541,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/update_tag_message", **params)
+        return self.session.call("resource_update_tag_message", **params)
 
 
     def get_zone_data(self, itemId, col, flags):
@@ -602,7 +602,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/get_zone_data", **params)
+        return self.session.call("resource_get_zone_data", **params)
 
 
     def bind_unit_trailer(self, resourceId, unitId, trailerId, time, mode):
@@ -617,7 +617,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/bind_unit_trailer", **params)
+        return self.session.call("resource_bind_unit_trailer", **params)
 
 
     def get_notification_data(self, itemId, col):
@@ -767,7 +767,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/get_notification_data", **params)
+        return self.session.call("resource_get_notification_data", **params)
 
 
     def update_tags_group(self, itemId, id, callMode, n, d, tgs):
@@ -796,7 +796,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/update_tags_group", **params)
+        return self.session.call("resource_update_tags_group", **params)
 
 
     def bind_unit_driver(self, resourceId, unitId, driverId, time, mode):
@@ -811,7 +811,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/bind_unit_driver", **params)
+        return self.session.call("resource_bind_unit_driver", **params)
 
 
     def update_drivers_group(self, itemId, id, callMode, n, d, drs, f):
@@ -841,7 +841,7 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/update_drivers_group", **params)
+        return self.session.call("resource_update_drivers_group", **params)
 
 
     def bind_unit_tag(self, resourceId, unitId, tagId, time, mode):
@@ -856,4 +856,4 @@ class Resource:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("resource/bind_unit_tag", **params)
+        return self.session.call("resource_bind_unit_tag", **params)

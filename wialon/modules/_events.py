@@ -1,7 +1,7 @@
 
 class Events:
     def __init__(self, session):
-        self.session session
+        self.session = session
 
     def unload(self, ):
         """
@@ -10,7 +10,7 @@ class Events:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("events/unload", **params)
+        return self.session.call("events_unload", **params)
 
 
     def check_updates(self, lang, measure, detalization):
@@ -215,4 +215,4 @@ class Events:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("events/check_updates", **params)
+        return self.session.call("events_check_updates", **params)

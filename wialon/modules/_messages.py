@@ -1,7 +1,7 @@
 
 class Messages:
     def __init__(self, session):
-        self.session session
+        self.session = session
 
     def get_packed_messages(self, itemId, timeFrom, timeTo, filtrationFlags):
         """
@@ -16,7 +16,7 @@ class Messages:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("messages/get_packed_messages", **params)
+        return self.session.call("messages_get_packed_messages", **params)
 
 
     def load_last(self, itemId, lastTime, lastCount, flags, flagsMask, loadCount):
@@ -38,10 +38,10 @@ class Messages:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("messages/load_last", **params)
+        return self.session.call("messages_load_last", **params)
 
 
-    def get_messages(self, indexFrom, indexTo, timeFrom:, timeTo, filter, flags, flagsMask, loadCount):
+    def get_messages(self, indexFrom, indexTo, timeFrom, timeTo, filter, flags, flagsMask, loadCount):
         """
                  You can find an example of this request in the sample Messages.
         Parameters
@@ -99,7 +99,7 @@ class Messages:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("messages/get_messages", **params)
+        return self.session.call("messages_get_messages", **params)
 
 
     def delete_message(self, msgIndex):
@@ -113,7 +113,7 @@ class Messages:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("messages/delete_message", **params)
+        return self.session.call("messages_delete_message", **params)
 
 
     def unload(self, ):
@@ -124,7 +124,7 @@ class Messages:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("messages/unload", **params)
+        return self.session.call("messages_unload", **params)
 
 
     def load_interval(self, itemId, timeFrom, timeTo, flags, flagsMask, loadCount):
@@ -154,7 +154,7 @@ class Messages:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("messages/load_interval", **params)
+        return self.session.call("messages_load_interval", **params)
 
 
     def get_message_file(self, itemId, fileId):
@@ -168,4 +168,4 @@ class Messages:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("messages/get_message_file", **params)
+        return self.session.call("messages_get_message_file", **params)

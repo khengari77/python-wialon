@@ -1,7 +1,7 @@
 
 class Exchange:
     def __init__(self, session):
-        self.session session
+        self.session = session
 
     def import_json(self, eventHash):
         """
@@ -12,7 +12,7 @@ class Exchange:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("exchange/import_json", **params)
+        return self.session.call("exchange_import_json", **params)
 
 
     def import_zones_read(self, eventHash):
@@ -24,7 +24,7 @@ class Exchange:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("exchange/import_zones_read", **params)
+        return self.session.call("exchange_import_zones_read", **params)
 
 
     def import_messages(self, itemId, eventHash):
@@ -37,7 +37,7 @@ class Exchange:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("exchange/import_messages", **params)
+        return self.session.call("exchange_import_messages", **params)
 
 
     def export_messages(self, layerName, format, itemId, timeFrom, timeTo, compress):
@@ -54,7 +54,7 @@ class Exchange:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("exchange/export_messages", **params)
+        return self.session.call("exchange_export_messages", **params)
 
 
     def import_pois_read(self, eventHash):
@@ -66,4 +66,4 @@ class Exchange:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("exchange/import_pois_read", **params)
+        return self.session.call("exchange_import_pois_read", **params)

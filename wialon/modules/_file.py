@@ -1,7 +1,7 @@
 
 class File:
     def __init__(self, session):
-        self.session session
+        self.session = session
 
     def write(self, itemId, storageType, path, content, writeType, contentType):
         """
@@ -33,7 +33,7 @@ class File:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("file/write", **params)
+        return self.session.call("file_write", **params)
 
 
     def rm(self, itemId, storageType, path):
@@ -58,7 +58,7 @@ class File:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("file/rm", **params)
+        return self.session.call("file_rm", **params)
 
 
     def library(self, type, flags):
@@ -86,7 +86,7 @@ class File:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("file/library", **params)
+        return self.session.call("file_library", **params)
 
 
     def type_library(self, text):
@@ -175,7 +175,7 @@ class File:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("file/type_library", **params)
+        return self.session.call("file_type_library", **params)
 
 
     def get(self, itemId, storageType, path, format):
@@ -195,7 +195,7 @@ class File:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("file/get", **params)
+        return self.session.call("file_get", **params)
 
 
     def list(self, itemId, storageType, path, mask, recursive, fullPath):
@@ -234,7 +234,7 @@ class File:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("file/list", **params)
+        return self.session.call("file_list", **params)
 
 
     def read(self, itemId, storageType, path, contentType):
@@ -261,7 +261,7 @@ class File:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("file/read", **params)
+        return self.session.call("file_read", **params)
 
 
     def put(self, itemId, storageType, path, writeType, eventHash):
@@ -284,7 +284,7 @@ class File:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("file/put", **params)
+        return self.session.call("file_put", **params)
 
 
     def mkdir(self, itemId, storageType, path):
@@ -303,4 +303,4 @@ class File:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("file/mkdir", **params)
+        return self.session.call("file_mkdir", **params)

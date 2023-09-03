@@ -1,7 +1,7 @@
 
 class Core:
     def __init__(self, session):
-        self.session session
+        self.session = session
 
     def search_item(self, id, flags):
         """
@@ -17,7 +17,7 @@ class Core:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("core/search_item", **params)
+        return self.session.call("core_search_item", **params)
 
 
     def create_resource(self, creatorId, name, dataFlags, skipCreatorCheck):
@@ -36,7 +36,7 @@ class Core:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("core/create_resource", **params)
+        return self.session.call("core_create_resource", **params)
 
 
     def use_auth_hash(self, authHash, operateAs, checkService):
@@ -49,7 +49,7 @@ class Core:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("core/use_auth_hash", **params)
+        return self.session.call("core_use_auth_hash", **params)
 
 
     def create_route(self, creatorId, name, dataFlags):
@@ -66,7 +66,7 @@ class Core:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("core/create_route", **params)
+        return self.session.call("core_create_route", **params)
 
 
     def create_unit_group(self, creatorId, name, dataFlags):
@@ -83,7 +83,7 @@ class Core:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("core/create_unit_group", **params)
+        return self.session.call("core_create_unit_group", **params)
 
 
     def get_account_data(self, type):
@@ -151,7 +151,7 @@ class Core:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("core/get_account_data", **params)
+        return self.session.call("core_get_account_data", **params)
 
 
     def get_hw_cmds(self, deviceTypeId, unitId, template, lang):
@@ -198,7 +198,7 @@ class Core:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("core/get_hw_cmds", **params)
+        return self.session.call("core_get_hw_cmds", **params)
 
 
     def check_accessors(self, items, flags):
@@ -222,7 +222,7 @@ class Core:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("core/check_accessors", **params)
+        return self.session.call("core_check_accessors", **params)
 
 
     def check_items_billing(self, items, accessFlags, serviceName):
@@ -298,7 +298,7 @@ class Core:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("core/check_items_billing", **params)
+        return self.session.call("core_check_items_billing", **params)
 
 
     def logout(self, ):
@@ -314,7 +314,7 @@ class Core:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("core/logout", **params)
+        return self.session.call("core_logout", **params)
 
 
     def create_unit(self, creatorId, name, hwTypeId, dataFlags):
@@ -333,7 +333,7 @@ class Core:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("core/create_unit", **params)
+        return self.session.call("core_create_unit", **params)
 
 
     def reset_password_perform(self, user, code):
@@ -348,7 +348,7 @@ class Core:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("core/reset_password_perform", **params)
+        return self.session.call("core_reset_password_perform", **params)
 
 
     def reset_password_request(self, user, url, email):
@@ -363,7 +363,7 @@ class Core:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("core/reset_password_request", **params)
+        return self.session.call("core_reset_password_request", **params)
 
 
     def create_user(self, creatorId, name, password, dataFlags):
@@ -381,7 +381,7 @@ class Core:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("core/create_user", **params)
+        return self.session.call("core_create_user", **params)
 
 
     def set_session_property(self, prop_value):
@@ -391,7 +391,7 @@ class Core:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("core/set_session_property", **params)
+        return self.session.call("core_set_session_property", **params)
 
 
     def duplicate(self, operateAs, continueCurrentSession):
@@ -404,7 +404,7 @@ class Core:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("core/duplicate", **params)
+        return self.session.call("core_duplicate", **params)
 
 
     def check_unique(self, type, value):
@@ -417,7 +417,7 @@ class Core:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("core/check_unique", **params)
+        return self.session.call("core_check_unique", **params)
 
 
     def create_auth_hash(self, ):
@@ -430,7 +430,7 @@ class Core:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("core/create_auth_hash", **params)
+        return self.session.call("core_create_auth_hash", **params)
 
 
     def get_hw_types(self, filterType, filterValue, includeType, ignoreRename):
@@ -465,4 +465,4 @@ class Core:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("core/get_hw_types", **params)
+        return self.session.call("core_get_hw_types", **params)

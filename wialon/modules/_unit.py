@@ -1,7 +1,7 @@
 
 class Unit:
     def __init__(self, session):
-        self.session session
+        self.session = session
 
     def update_fuel_level_params(self, itemId, flags, ignoreStayTimeout, minFillingVolume, minTheftTimeout, minTheftVolume, filterQuality, fillingsJoinInterval, theftsJoinInterval, extraFillingTimeout):
         """
@@ -20,7 +20,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/update_fuel_level_params", **params)
+        return self.session.call("unit_update_fuel_level_params", **params)
 
 
     def update_image(self, itemId, oldItemId):
@@ -29,7 +29,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/update_image", **params)
+        return self.session.call("unit_update_image", **params)
 
 
     def update_traffic_counter(self, itemId, newValue, regReset):
@@ -44,7 +44,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/update_traffic_counter", **params)
+        return self.session.call("unit_update_traffic_counter", **params)
 
 
     def registry_maintenance_event(self, date, info, duration, cost, location, x, y, description, mileage, eh, done_svcs, itemId):
@@ -66,7 +66,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/registry_maintenance_event", **params)
+        return self.session.call("unit_registry_maintenance_event", **params)
 
 
     def exec_cmd(self, itemId, commandName, linkType, param, timeout, flags):
@@ -86,7 +86,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/exec_cmd", **params)
+        return self.session.call("unit_exec_cmd", **params)
 
 
     def update_trip_detector(self, itemId, type, gpsCorrection, minSat, minMovingSpeed, minStayTime, maxMessagesDistance, minTripTime, minTripDistance):
@@ -105,7 +105,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/update_trip_detector", **params)
+        return self.session.call("unit_update_trip_detector", **params)
 
 
     def update_phone(self, itemId, phoneNumber):
@@ -120,7 +120,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/update_phone", **params)
+        return self.session.call("unit_update_phone", **params)
 
 
     def update_fuel_impulse_params(self, itemId, maxImpulses, skipZero):
@@ -133,7 +133,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/update_fuel_impulse_params", **params)
+        return self.session.call("unit_update_fuel_impulse_params", **params)
 
 
     def get_trips(self, itemId, msgsSource, timeFrom, timeTo):
@@ -167,7 +167,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/get_trips", **params)
+        return self.session.call("unit_get_trips", **params)
 
 
     def calc_sensors(self, source, indexFrom, indexTo, unitId, sensorId, width):
@@ -206,7 +206,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/calc_sensors", **params)
+        return self.session.call("unit_calc_sensors", **params)
 
 
     def update_accelerometers_calibration(self, itemId, timeFrom, timeTo):
@@ -215,7 +215,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/update_accelerometers_calibration", **params)
+        return self.session.call("unit_update_accelerometers_calibration", **params)
 
 
     def get_fuel_settings(self, itemId):
@@ -273,7 +273,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/get_fuel_settings", **params)
+        return self.session.call("unit_get_fuel_settings", **params)
 
 
     def update_phone2(self, itemId, phoneNumber):
@@ -288,7 +288,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/update_phone2", **params)
+        return self.session.call("unit_update_phone2", **params)
 
 
     def get_video_settings(self, itemId):
@@ -303,7 +303,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/get_video_settings", **params)
+        return self.session.call("unit_get_video_settings", **params)
 
 
     def update_fuel_calc_types(self, itemId, calcTypes):
@@ -315,7 +315,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/update_fuel_calc_types", **params)
+        return self.session.call("unit_update_fuel_calc_types", **params)
 
 
     def update_mileage_counter(self, itemId, newValue):
@@ -330,7 +330,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/update_mileage_counter", **params)
+        return self.session.call("unit_update_mileage_counter", **params)
 
 
     def update_messages_filter(self, itemId, enabled, skipInvalid, minSats, maxHdop, maxSpeed, lbsCorrection):
@@ -347,7 +347,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/update_messages_filter", **params)
+        return self.session.call("unit_update_messages_filter", **params)
 
 
     def get_command_definition_data(self, itemId, col):
@@ -359,7 +359,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/get_command_definition_data", **params)
+        return self.session.call("unit_get_command_definition_data", **params)
 
 
     def update_video_status(self, units, status):
@@ -371,7 +371,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/update_video_status", **params)
+        return self.session.call("unit_update_video_status", **params)
 
 
     def update_calc_flags(self, itemId, newValue):
@@ -395,7 +395,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/update_calc_flags", **params)
+        return self.session.call("unit_update_calc_flags", **params)
 
 
     def registry_custom_event(self, date, x, y, description, violation, itemId, nt):
@@ -412,7 +412,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/registry_custom_event", **params)
+        return self.session.call("unit_registry_custom_event", **params)
 
 
     def update_access_password(self, itemId, accessPassword):
@@ -426,7 +426,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/update_access_password", **params)
+        return self.session.call("unit_update_access_password", **params)
 
 
     def calc_last_message(self, unitId, sensors, flags):
@@ -442,7 +442,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/calc_last_message", **params)
+        return self.session.call("unit_calc_last_message", **params)
 
 
     def update_hw_params(self, hwId, action):
@@ -482,7 +482,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/update_hw_params", **params)
+        return self.session.call("unit_update_hw_params", **params)
 
 
     def update_service_interval(self, itemId, id, callMode, n, t, im, it, ie, pm, pt, pe, c):
@@ -523,7 +523,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/update_service_interval", **params)
+        return self.session.call("unit_update_service_interval", **params)
 
 
     def add_video_packets(self, units, packets):
@@ -534,7 +534,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/add_video_packets", **params)
+        return self.session.call("unit_add_video_packets", **params)
 
 
     def get_drive_rank_settings(self, itemId):
@@ -552,7 +552,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/get_drive_rank_settings", **params)
+        return self.session.call("unit_get_drive_rank_settings", **params)
 
 
     def upload_image(self, itemId, eventHash):
@@ -564,7 +564,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/upload_image", **params)
+        return self.session.call("unit_upload_image", **params)
 
 
     def update_device_type(self, itemId, deviceTypeId, uniqueId):
@@ -581,7 +581,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/update_device_type", **params)
+        return self.session.call("unit_update_device_type", **params)
 
 
     def registry_status_event(self, date, description, itemId):
@@ -594,7 +594,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/registry_status_event", **params)
+        return self.session.call("unit_registry_status_event", **params)
 
 
     def update_video_autopay(self, units, value):
@@ -605,7 +605,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/update_video_autopay", **params)
+        return self.session.call("unit_update_video_autopay", **params)
 
 
     def update_command_definition(self, itemId, id, callMode, n, c, l, p, a):
@@ -643,7 +643,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/update_command_definition", **params)
+        return self.session.call("unit_update_command_definition", **params)
 
 
     def get_trip_detector(self, itemId):
@@ -668,7 +668,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/get_trip_detector", **params)
+        return self.session.call("unit_get_trip_detector", **params)
 
 
     def get_accelerometers_calibration(self, itemId):
@@ -691,7 +691,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/get_accelerometers_calibration", **params)
+        return self.session.call("unit_get_accelerometers_calibration", **params)
 
 
     def update_fuel_rates_params(self, itemId, consSummer, consWinter, winterMonthFrom, winterDayFrom, winterMonthTo, winterDayTo):
@@ -708,7 +708,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/update_fuel_rates_params", **params)
+        return self.session.call("unit_update_fuel_rates_params", **params)
 
 
     def update_fuel_math_params(self, itemId, idling, urban, suburban, loadCoef):
@@ -723,7 +723,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/update_fuel_math_params", **params)
+        return self.session.call("unit_update_fuel_math_params", **params)
 
 
     def get_messages_filter(self, itemId):
@@ -745,7 +745,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/get_messages_filter", **params)
+        return self.session.call("unit_get_messages_filter", **params)
 
 
     def get_vin_info(self, vin):
@@ -776,7 +776,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/get_vin_info", **params)
+        return self.session.call("unit_get_vin_info", **params)
 
 
     def update_eh_counter(self, itemId, newValue):
@@ -790,7 +790,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/update_eh_counter", **params)
+        return self.session.call("unit_update_eh_counter", **params)
 
 
     def update_unique_id2(self, itemId, uniqueId2):
@@ -804,7 +804,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/update_unique_id2", **params)
+        return self.session.call("unit_update_unique_id2", **params)
 
 
     def registry_fuel_filling_event(self, date, volume, cost, location, deviation, x, y, description, itemId):
@@ -823,7 +823,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/registry_fuel_filling_event", **params)
+        return self.session.call("unit_registry_fuel_filling_event", **params)
 
 
     def update_activity_settings(self, itemId, type):
@@ -838,7 +838,7 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/update_activity_settings", **params)
+        return self.session.call("unit_update_activity_settings", **params)
 
 
     def get_report_settings(self, itemId):
@@ -858,4 +858,4 @@ class Unit:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit/get_report_settings", **params)
+        return self.session.call("unit_get_report_settings", **params)

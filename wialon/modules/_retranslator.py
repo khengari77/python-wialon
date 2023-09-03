@@ -1,7 +1,7 @@
 
 class Retranslator:
     def __init__(self, session):
-        self.session session
+        self.session = session
 
     def get_stats(self, itemId):
         """
@@ -20,7 +20,7 @@ class Retranslator:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("retranslator/get_stats", **params)
+        return self.session.call("retranslator_get_stats", **params)
 
 
     def update_operating(self, itemId, operate, stopTime, timeFrom, timeTo, callMode):
@@ -39,4 +39,4 @@ class Retranslator:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("retranslator/update_operating", **params)
+        return self.session.call("retranslator_update_operating", **params)

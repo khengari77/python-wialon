@@ -1,7 +1,7 @@
 
 class Route:
     def __init__(self, session):
-        self.session session
+        self.session = session
 
     def get_round_data(self, itemId, col):
         """
@@ -103,7 +103,7 @@ class Route:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("route/get_round_data", **params)
+        return self.session.call("route_get_round_data", **params)
 
 
     def get_all_rounds(self, itemId, timeFrom, timeTo, fullJson):
@@ -167,7 +167,7 @@ class Route:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("route/get_all_rounds", **params)
+        return self.session.call("route_get_all_rounds", **params)
 
 
     def get_schedule_time(self, itemId, scheduleId, timeFrom, timeTo):
@@ -185,7 +185,7 @@ class Route:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("route/get_schedule_time", **params)
+        return self.session.call("route_get_schedule_time", **params)
 
 
     def update_round(self, itemId, id, callMode, n, d, u, at, vt, vp, sh, cu, f, tz):
@@ -234,7 +234,7 @@ class Route:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("route/update_round", **params)
+        return self.session.call("route_update_round", **params)
 
 
     def load_rounds(self, itemId, timeFrom, timeTo, fullJson):
@@ -277,4 +277,4 @@ class Route:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("route/load_rounds", **params)
+        return self.session.call("route_load_rounds", **params)

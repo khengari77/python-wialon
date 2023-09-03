@@ -1,7 +1,7 @@
 
 class Order:
     def __init__(self, session):
-        self.session session
+        self.session = session
 
     def list_attachments(self, itemId, id):
         """
@@ -20,7 +20,7 @@ class Order:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("order/list_attachments", **params)
+        return self.session.call("order_list_attachments", **params)
 
 
     def get_attachment(self, itemId, id, path):
@@ -34,7 +34,7 @@ class Order:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("order/get_attachment", **params)
+        return self.session.call("order_get_attachment", **params)
 
 
     def route_update(self, itemId, orders, routeId, callMode):
@@ -57,7 +57,7 @@ class Order:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("order/route_update", **params)
+        return self.session.call("order_route_update", **params)
 
 
     def attach(self, itemId, id, eventHash):
@@ -70,7 +70,7 @@ class Order:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("order/attach", **params)
+        return self.session.call("order_attach", **params)
 
 
     def detach(self, itemId, id, path):
@@ -84,4 +84,4 @@ class Order:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("order/detach", **params)
+        return self.session.call("order_detach", **params)

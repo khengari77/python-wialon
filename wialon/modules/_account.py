@@ -1,7 +1,7 @@
 
 class Account:
     def __init__(self, session):
-        self.session session
+        self.session = session
 
     def update_min_days(self, itemId, minDays):
         """
@@ -12,7 +12,7 @@ class Account:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("account/update_min_days", **params)
+        return self.session.call("account_update_min_days", **params)
 
 
     def trash(self, callMode, guids):
@@ -48,7 +48,7 @@ class Account:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("account/trash", **params)
+        return self.session.call("account_trash", **params)
 
 
     def update_sub_plans(self, itemId, plans):
@@ -63,7 +63,7 @@ class Account:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("account/update_sub_plans", **params)
+        return self.session.call("account_update_sub_plans", **params)
 
 
     def enable_account(self, itemId, enable):
@@ -75,7 +75,7 @@ class Account:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("account/enable_account", **params)
+        return self.session.call("account_enable_account", **params)
 
 
     def get_account_history(self, itemId, days, tz):
@@ -103,7 +103,7 @@ class Account:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("account/get_account_history", **params)
+        return self.session.call("account_get_account_history", **params)
 
 
     def change_account(self, itemId, resourceId):
@@ -125,7 +125,7 @@ class Account:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("account/change_account", **params)
+        return self.session.call("account_change_account", **params)
 
 
     def get_billing_plans(self, ):
@@ -204,7 +204,7 @@ class Account:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("account/get_billing_plans", **params)
+        return self.session.call("account_get_billing_plans", **params)
 
 
     def update_flags(self, itemId, flags, blockBalance, denyBalance):
@@ -219,7 +219,7 @@ class Account:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("account/update_flags", **params)
+        return self.session.call("account_update_flags", **params)
 
 
     def get_account_data(self, itemId, type):
@@ -228,7 +228,7 @@ class Account:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("account/get_account_data", **params)
+        return self.session.call("account_get_account_data", **params)
 
 
     def delete_account(self, itemId):
@@ -239,7 +239,7 @@ class Account:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("account/delete_account", **params)
+        return self.session.call("account_delete_account", **params)
 
 
     def update_dealer_rights(self, itemId, enable):
@@ -251,7 +251,7 @@ class Account:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("account/update_dealer_rights", **params)
+        return self.session.call("account_update_dealer_rights", **params)
 
 
     def create_account(self, itemId, plan):
@@ -263,7 +263,7 @@ class Account:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("account/create_account", **params)
+        return self.session.call("account_create_account", **params)
 
 
     def do_payment(self, itemId, balanceUpdate, daysUpdate, description):
@@ -277,7 +277,7 @@ class Account:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("account/do_payment", **params)
+        return self.session.call("account_do_payment", **params)
 
 
     def update_plan(self, itemId, plan):
@@ -291,7 +291,7 @@ class Account:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("account/update_plan", **params)
+        return self.session.call("account_update_plan", **params)
 
 
     def list_change_accounts(self, units):
@@ -309,7 +309,7 @@ class Account:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("account/list_change_accounts", **params)
+        return self.session.call("account_list_change_accounts", **params)
 
 
     def update_billing_service(self, itemId, name, type, intervalType, costTable):
@@ -326,7 +326,7 @@ class Account:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("account/update_billing_service", **params)
+        return self.session.call("account_update_billing_service", **params)
 
 
     def update_history_period(self, itemId, historyPeriod):
@@ -338,4 +338,4 @@ class Account:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("account/update_history_period", **params)
+        return self.session.call("account_update_history_period", **params)

@@ -1,7 +1,7 @@
 
 class Unit_group:
     def __init__(self, session):
-        self.session session
+        self.session = session
 
     def update_units(self, itemId, units):
         """
@@ -15,4 +15,4 @@ class Unit_group:
         """
         params = locals()
         params.pop('self')
-        return self.session.call("unit_group/update_units", **params)
+        return self.session.call("unit_group_update_units", **params)

@@ -1,6 +1,24 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from 	.modules._account		import      Account
+from 	.modules._apps			import      Apps
+from 	.modules._core			import      Core
+from 	.modules._events		    import      Events
+from 	.modules._exchange		import      Exchange
+from 	.modules._file			import      File
+from 	.modules._item			import      Item
+from 	.modules._messages		import      Messages
+from 	.modules._order			import      Order
+from 	.modules._render		    import      Render
+from 	.modules._report		    import      Report
+from 	.modules._resource		import      Resource
+from 	.modules._retranslator	import      Retranslator
+from 	.modules._route			import      Route
+from 	.modules._token			import      Token
+from 	.modules._unit			import      Unit
+from 	.modules._unit_group	    import      Unit_group
+from 	.modules._user			import      User
 try:
     from builtins import str
 except:
@@ -93,6 +111,24 @@ class Wialon(object):
         )
 
         self.__base_api_url = urljoin(self.__base_url, 'wialon/ajax.html?')
+        self.account = Account(self)
+        self.apps = Apps(self)
+        self.core = Core(self)
+        self.events = Events(self)
+        self.exchange = Exchange(self)
+        self.file = File(self)
+        self.item = Item(self)
+        self.messages = Messages(self)
+        self.order = Order(self)
+        self.render = Render(self)
+        self.report = Report(self)
+        self.resource = Resource(self)
+        self.retranslator = Retranslator(self)
+        self.route = Route(self)
+        self.token = Token(self)
+        self.unit = Unit(self)
+        self.unit_group = Unit_group(self)
+        self.user = User(self)
 
     @property
     def sid(self):
